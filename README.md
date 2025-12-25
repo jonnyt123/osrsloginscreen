@@ -1,4 +1,6 @@
-# Old School Login Screen — Static Demo
+# osrsloginscreen
+
+## Old School Login Screen — Static Demo
 
 Small static login-screen demo (HTML/CSS/JS) intended to run directly in the browser.
 
@@ -7,10 +9,10 @@ Quick start
 - Edit `file-lvh.js` and refresh the page to test behavior changes.
 
 Files
-- `file-qfr.html` — main markup (form with `id="loginForm"`, inputs `id="username"` / `id="password"`).
+- `file-qfr.html` — main markup (form with `id="loginForm"`, inputs `id="username"` / `id="password`).
 - `file-mva.css` — styling and background image (external asset URL; verify licensing before swapping).
 - `file-lvh.js` — form submit handling and example login flows (see Simulation section).
-- `file-ugc.html` — audio element example (`id="backgroundAudio"`).
+- `file-ugc.html` — audio element example (`id="backgroundAudio").
 
 Simulation mode (local testing)
 - The demo supports a simulation toggle via URL query. Open the page with `?simulate=1` or `?simulate=true` to enable simulated responses (no backend required).
@@ -32,6 +34,12 @@ Project conventions
 Contributing / PR notes
 - Document behavior changes in the PR description (why a change is required and how to test it locally).
 - If adding external libraries, add a short justification and usage example to the PR.
+
+Pull request checklist
+- [ ] Describe the change and why it is needed in the PR summary.
+- [ ] Include steps to test locally in the PR body.
+- [ ] Confirm any added assets have a compatible license and note them in the PR.
+- [ ] Ensure CI workflow passes (where applicable).
 
 If you'd like, I can:
 - Add a short test harness that simulates backend responses programmatically.
@@ -122,8 +130,6 @@ chmod +x run.sh
 ./run.sh --simulate  # open with ?simulate=1 to enable simulated responses
 ```
 
-The script uses `python3 -m http.server` under the hood and prints the server PID so you can stop it with `kill <PID>`.
-
 NPM alternative
 - A minimal `package.json` is included to provide an npm-based alternative using `http-server` via `npx`.
 - To use the npm script (no global install required):
@@ -150,7 +156,6 @@ Windows / PowerShell
 
 ```powershell
 ./run.ps1             # serve at http://localhost:8000/file-qfr.html
-.
 ./run.ps1 -Simulate   # serve and open with ?simulate=1
 ./run.ps1 -Port 9000  # custom port
 ```
