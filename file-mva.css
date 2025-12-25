@@ -1,0 +1,202 @@
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: 'RuneScape07', 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('assets/images/backgrounds/default.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    text-align: center;
+}
+
+.login-box {
+    width: 765px;
+    height: 503px;
+    background-image: url('assets/images/components/loginContainer.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.login-box h1 {
+    margin: 0;
+    padding-top: 42px;
+    font-size: 28px;
+}
+
+.login-box input {
+    width: 280px;
+    padding: 8px 10px;
+    margin: 6px 0;
+    border: 1px solid #222;
+    border-radius: 3px;
+    background-color: rgba(0,0,0,0.6);
+    color: #fff;
+    font-family: 'RuneScape07', sans-serif;
+    letter-spacing: 0.5px;
+}
+
+.login-box button {
+    width: 220px;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 3px;
+    background-color: transparent;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    background-image: url('assets/images/components/largeButton.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.login-box button:hover {
+    filter: brightness(0.95);
+}
+
+.login-box a {
+    display: block;
+}
+
+/* RuneScape fonts */
+@font-face {
+  font-family: 'RuneScape07';
+  src: url('assets/fonts/Runescape-Plain-12.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'RuneScape07Bold';
+  src: url('assets/fonts/Runescape-Bold-12.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+.logo-img {
+  width: 320px;
+  margin-top: 18px;
+  margin-bottom: 10px;
+}
+
+.login-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.session-row {
+  position: absolute;
+  bottom: 20px;
+  left: 24px;
+  color: #fff;
+  font-family: 'RuneScape07', sans-serif;
+}
+
+.music-btn {
+  position: absolute;
+  bottom: 20px;
+  right: 24px;
+}
+
+.small-button {
+  width: 120px;
+  height: 38px;
+  font-family: 'RuneScape07Bold', sans-serif;
+  background-image: url('assets/images/components/smallButton.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  color: #fff;
+  border: none;
+  text-align: center;
+  display: inline-block;
+}
+
+.small-button .small-desc {
+  font-family: 'RuneScape07';
+  font-size: 11px;
+  margin-top: -6px;
+  color: #fff;
+}
+
+.background-arrows {
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  z-index: 4;
+  display:flex;
+  gap: 6px;
+}
+
+.arrow-btn {
+  width: 30px;
+  height: 23px;
+  border: none;
+  background-image: url('assets/images/components/arrow.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+.arrow-btn.right { transform: scaleX(-1); }
+
+.settings-btn {
+  position: absolute;
+  top: 12px;
+  left: 18px;
+  z-index: 4;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.settings-modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0,0,0,0.6);
+  z-index: 50;
+}
+.settings-modal[aria-hidden="false"] { display:flex; }
+.settings-content {
+  background: rgba(0,0,0,0.9);
+  border: 2px solid #333;
+  padding: 16px;
+  color: #fff;
+  width: 320px;
+  font-family: 'RuneScape07';
+}
+
+#progressContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 140%);
+  z-index: 3;
+}
+
+#progressBarOuter {
+  box-sizing: border-box;
+}
+
+#progressFiller {
+  height: 100%;
+}
+

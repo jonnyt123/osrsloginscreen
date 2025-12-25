@@ -1,0 +1,62 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Old School RuneScape — Login</title>
+  <link rel="stylesheet" href="file-mva.css">
+</head>
+<body>
+  <div class="container">
+    <div class="login-box">
+      <canvas id="runesCanvas" style="position:absolute;inset:0;width:100%;height:100%;z-index:0;"></canvas>
+      <img src="assets/images/components/logoWithOldSchool.png" alt="logo" class="logo-img" style="z-index:1;position:relative;" />
+      <div class="login-inner" style="z-index:1;position:relative;">
+        <form id="loginForm">
+          <input type="text" id="username" placeholder="Email / Username" required="">
+          <input type="password" id="password" placeholder="Password" required="">
+          <button type="submit">Login</button>
+        </form>
+      </div>
+
+      <!-- Progress bar (hidden by default) -->
+      <div id="progressContainer" style="display:none; z-index:2; position:relative; margin-top:6px;">
+        <div id="progressBarOuter" style="width:300px; height:40px; background:#000; border:2px solid #802019; position:relative;">
+          <div id="progressFiller" style="background:#802019; height:100%; width:0%; transition:width 200ms linear;"></div>
+          <div id="progressLabel" style="position:absolute;left:0;right:0;top:0;bottom:0;display:flex;align-items:center;justify-content:center;color:#fff;font-family:RuneScape07Bold;text-shadow:1px 1px #000;">Saving preferences - 0%</div>
+        </div>
+      </div>
+
+      <div class="background-arrows">
+        <button id="bgLeft" class="arrow-btn left"></button>
+        <button id="bgRight" class="arrow-btn right"></button>
+      </div>
+      <div class="session-row"><button id="sessionButton" class="small-button" type="button">bspwm<div class="small-desc">Click to switch</div></button></div>
+      <div class="music-btn"><img id="musicToggle" src="assets/images/components/musicOn.png" alt="music" width="28"></div>
+      <button id="settingsBtn" class="settings-btn" title="Settings" aria-label="Settings">⚙️</button>
+
+      <!-- Settings modal -->
+      <div id="settingsModal" class="settings-modal" role="dialog" aria-hidden="true">
+        <div class="settings-content">
+          <h3>Settings</h3>
+          <label><input type="checkbox" id="rememberUsernameCbx" /> Remember username</label>
+          <label><input type="checkbox" id="hideUsernameCbx" /> Hide username on load</label>
+          <label><input type="checkbox" id="hideBackgroundSelectCbx" /> Hide background selector</label>
+          <div style="margin-top:10px; text-align:right;">
+            <button id="saveSettingsBtn" class="small-button">Save</button>
+            <button id="closeSettingsBtn" class="small-button">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <audio id="backgroundAudio" loop style="display:none;">
+    <source src="assets/audio/scapeMain.mp3" type="audio/mpeg">
+  </audio>
+  <script src="file-lvh.js"></script>
+</body>
+</html>
+    
+

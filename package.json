@@ -1,0 +1,15 @@
+{
+  "name": "osrsloginscreen",
+  "version": "1.0.0",
+  "description": "Static Old School RuneScape login screen demo",
+  "scripts": {
+    "start": "npx http-server -p 8000",
+    "start:simulate": "bash run.sh --simulate",
+    "start:simulate:win": "powershell -ExecutionPolicy Bypass -File run.ps1 -Simulate",
+    "theme:install": "cd osrs-web-greeter-theme-main && npm ci",
+    "theme:build": "cd osrs-web-greeter-theme-main && npm run predeploy && mkdir -p ../theme-build && cp -a build/. ../theme-build/",
+    "theme:serve": "npx http-server theme-build -p 8001"
+  },
+  "author": "",
+  "license": "MIT"
+}
