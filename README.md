@@ -1,5 +1,9 @@
 # osrsloginscreen
 
+
+[![GitHub Actions](https://github.com/jonnyt123/osrsloginscreen/actions/workflows/build-theme.yml/badge.svg)](https://github.com/jonnyt123/osrsloginscreen/actions/workflows/build-theme.yml)
+[![Project Board](https://img.shields.io/badge/Project-Board-blue)](https://github.com/users/jonnyt123/projects/1)
+
 ## Old School Login Screen — Static Demo
 
 Small static login-screen demo (HTML/CSS/JS) intended to run directly in the browser.
