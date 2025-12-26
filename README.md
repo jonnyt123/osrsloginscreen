@@ -65,6 +65,11 @@ npm run theme:serve
 # then open http://localhost:8001 in your browser
 ```
 
+Theme install/env flags
+- `INSTALL_PREFIX` (default: `/usr/local/share/web-greeter/themes/osrs`): where the built assets are installed by `build.sh`.
+- `SKIP_INSTALL=1`: run the build and rewrite paths, but leave artifacts in `./build` without installing.
+- `USE_SUDO=0`: run the install step without sudo (useful if `INSTALL_PREFIX` is already writable).
+
 - To run the React app in development mode (hot-reload), run inside the theme directory:
 
 ```bash

@@ -28,7 +28,7 @@
   },
   "scripts": {
     "start": "env-cmd -f ./.env.web react-scripts start",
-    "build": "env-cmd -f ./.env.dm react-scripts build && sudo ./build.sh",
+    "build": "env-cmd -f ./.env.dm react-scripts build && if [ \"${SKIP_INSTALL:-0}\" = \"1\" ]; then ./build.sh; elif [ \"${USE_SUDO:-1}\" = \"1\" ]; then sudo -E INSTALL_PREFIX=\"${INSTALL_PREFIX:-}\" ./build.sh; else INSTALL_PREFIX=\"${INSTALL_PREFIX:-}\" ./build.sh; fi",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "sudo env-cmd -f ./.env.web react-scripts build",
