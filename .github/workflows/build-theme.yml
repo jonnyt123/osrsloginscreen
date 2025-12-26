@@ -20,12 +20,15 @@ jobs:
         with:
           node-version: '18'
           cache: 'npm'
+          cache-dependency-path: osrs-web-greeter-theme-main/package-lock.json
 
       - name: Install theme dependencies
-        run: npm ci --prefix osrs-web-greeter-theme-main
+        run: npm ci
+        working-directory: osrs-web-greeter-theme-main
 
       - name: Build theme
-        run: npm run build --prefix osrs-web-greeter-theme-main
+        run: npm run build
+        working-directory: osrs-web-greeter-theme-main
 
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
